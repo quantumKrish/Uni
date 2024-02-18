@@ -1,0 +1,55 @@
+@import url(reset.css);
+
+body {
+
+    background-color: rgb(216, 231, 145);
+    padding: 7% 5% 7% 5%; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+h2{
+
+    font-size: 24pt;
+    font-weight: bolder;
+
+
+}
+
+.Motorcycles p {
+
+    background-color: silver;
+    
+}
+
+.Motorcycles strong {
+
+    color: rgb(165, 38, 38);
+    
+}
+
+.Music p {
+
+    background-color: gold;
+    
+}
+
+.Music ul {
+
+    list-style-type: circle;
+    color: orange;
+
+    margin-left: 20px;
+}
+
+.Skateboarding p {
+
+    background-color: lightblue;
+    
+}
+
+a:hover{
+    
+    background-color: wheat;
+}
+

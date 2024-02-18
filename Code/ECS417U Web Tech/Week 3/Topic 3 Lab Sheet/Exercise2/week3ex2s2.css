@@ -1,0 +1,53 @@
+
+body {
+
+    background-color: rgb(23, 144, 230);
+    padding: 7% 5% 7% 5%; 
+font-family: 'Times New Roman', Times, serif;
+}
+
+h2{
+
+    font-size: 24pt;
+    font-weight: bolder;
+
+
+}
+
+.Motorcycles p {
+
+    background-color: teal;
+    
+}
+
+.Motorcycles strong {
+
+    color: rgb(238, 106, 207);
+    
+}
+
+.Music p {
+
+    background-color: navajowhite;
+    
+}
+
+.Music ul {
+
+    list-style-type: square;
+    color: indianred;
+
+    margin-left: 20px;
+}
+
+.Skateboarding p {
+
+    background-color: peru;
+    
+}
+
+a:hover{
+    
+    background-color: turquoise;
+}
+
