@@ -1,0 +1,46 @@
+@import url(reset.css);
+
+body {
+
+    font-family: monospace, sans-serif;
+
+}
+
+caption {
+
+    font-size: 1.5em;
+    font-weight: 1000;
+    color: white;
+    background-color: rgb(137, 32, 32) ;
+    padding: 0.26em;
+
+}
+
+table {
+
+    border: solid 2px rgb(137, 32, 32);
+    width: 80%;
+}
+
+
+tbody td {
+
+    border: solid 1px black;
+    
+}
+
+
+
+
+th {
+
+    border: solid 1px black;
+    background-color: rgb(197, 196, 196);
+
+}
+
+img {
+    
+    border-radius: 1em
+}
+

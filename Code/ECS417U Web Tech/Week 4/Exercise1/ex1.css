@@ -1,0 +1,51 @@
+@import url(reset.css);
+
+body {
+
+    font-family: monospace, sans-serif;
+
+}
+
+caption {
+
+    font-size: 1.5em;
+    font-weight: 1000;
+    background-color: teal ;
+    padding: 0.24em;
+
+}
+
+table {
+
+    border: solid 2px teal;
+    width: 60%;
+}
+
+tbody tr {
+
+    background-color:gainsboro ;
+
+
+
+}
+
+tbody td {
+
+    border: solid 1px black;
+
+}
+
+.white {
+    
+    background-color: white;
+}
+
+.bold {
+
+    font-weight: bold;
+}
+
+#centre {
+
+    text-align: center;
+}

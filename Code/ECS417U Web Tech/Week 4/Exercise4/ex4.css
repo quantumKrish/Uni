@@ -1,0 +1,75 @@
+@import url(reset.css);
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+form {
+
+    margin: 0.5em;
+    width: 70%;
+    margin: 5% auto;
+
+
+}
+
+fieldset {
+
+    background-color: rgb(223, 247, 207);
+    width: 100%;
+    margin: 0.5em;
+    padding: 0.5em;
+
+}
+
+.border {
+
+    border: solid 1px rgb(13, 110, 58);
+    padding: 0.7em;
+    margin-bottom: 0.6em;
+
+}
+
+
+legend {
+
+    font-weight: bold;
+    color: white;
+    background-color: rgb(13, 110, 58);
+    padding: 0.26em;
+    width: calc(100% - 1 * 0.7em); 
+    text-align: center;
+}
+
+
+.white {
+
+    background-color: white;
+    padding: 1em;
+}
+
+.input-container {
+
+    text-align: center; 
+    
+  }
+  
+input[type="submit"], input[type="reset"] {
+
+    display: inline-block; 
+    background-color: rgb(13, 110, 58);
+    color: #fff;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 5%;
+    margin-right: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add box shadow */
+
+
+}

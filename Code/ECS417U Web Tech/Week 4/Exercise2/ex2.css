@@ -1,0 +1,64 @@
+@import url(reset.css);
+
+body {
+
+    font-family: monospace, sans-serif;
+    padding-bottom: 1em;
+    
+
+}
+
+caption {
+
+    font-size: 1.5em;
+    font-weight: 1000;
+    color: white;
+    background-color: rgb(137, 32, 32) ;
+    padding: 0.26em;
+
+}
+
+table {
+
+    border: solid 2px rgb(137, 32, 32);
+    width: 60%;
+    padding: 10px; 
+
+    
+}
+
+
+tbody td {
+
+    border: solid 1px black;
+    
+}
+
+
+
+
+th {
+
+    border: solid 1px black;
+    background-color: rgb(197, 196, 196);
+    
+
+}
+
+img {
+    
+    border-radius: 1em
+    
+}
+
+
+#innerTable {
+
+    border: solid 2px rgb(47, 14, 232);
+
+    width: calc(100% - 2em); 
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+}

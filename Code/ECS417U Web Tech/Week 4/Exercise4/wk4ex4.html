@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+    <head>
+
+        <meta charset = "UTF-8">
+        <title> Shirt Selection Form </title>
+        <link rel = "stylesheet" type = "text/css" href = "ex4.css">
+
+    </head>
+
+    <body>
+
+        <form method="GET" action="https://drusmannaeem.co.uk/process.php">
+
+            <fieldset>
+
+                <legend>Shirt Order Form</legend>            
+                
+                <div class = "border">
+
+                    <p>
+                    Shirt Size
+                    <br>
+
+                    <select name="size">
+                            <option>Choose size</option>
+                            <option>XS</option>
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                            <option>XL</option>
+                        </select>
+
+                        <br>
+                        Sleeves
+                        <br>
+                        <input type="radio" name="sleeve" value="short">Short <br>
+                        <input type="radio" name="sleeve" value="long">Long
+                    
+
+                        <br>
+                        Choose shirt colour <br>
+                        <input type="color" name="colorChoice">
+                    
+
+                        <br>
+                        Quantity 
+                        <br>
+                        <input type="number" name="quantity" min="1" max="10">
+
+                        <br>
+                        Date requested
+                        <br>
+                        <input type="date" name="dateRequested">
+
+                    </p>
+
+                </div>
+
+                <div class = "border">
+
+                    <p>
+                        Name
+                        <br>
+                        <input type="text" name="name">
+
+                        <br>
+                        Email address
+                        <br>
+                        <input type="email" name="email">
+
+                        <br>
+                        Telephone number
+                        <br>
+                        <input type="tel" name="telephone" pattern="\d{2}-\d{3}-\d{3}-\d{4}">
+                        Example: 44-207-882-1234
+
+                    </p>
+
+                </div>
+
+                <div class = "border">
+
+                    <p>
+                        Address
+                        <br>
+                        <input name="address">
+
+                        <br>
+                        City
+                        <br>
+                        <input list="cities" id="city" name="city" autocomplete="off">
+                        <datalist id="cities">
+                            <option value="London">
+                            <option value="Milton Keynes">
+                            <option value="Colchester">
+                            <option value="Basingstoke">
+                        </datalist>
+                        <br>
+
+                        Postcode
+                        <br>
+                        <input type="text" name="postcode">
+
+
+
+                    </p>
+
+                </div>
+
+                <div class = "white">
+
+                    <p>
+                        Please keep me informed about future shirt designs
+                        <input type="checkbox" name="futureInfo?" value="accept"><br>
+
+                        <div class="input-container">
+                            <input type="submit" value="Submit">
+                            <input type="reset" value="Clear Form">
+                        </div>
+                    </p>
+
+            </fieldset>
+        </form>
+
+    </body>
+
+</html>

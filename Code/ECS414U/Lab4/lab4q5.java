@@ -1,4 +1,5 @@
-package Code.ECS414U.Lab4;
+package ECS414U.Lab4;
+
 public class lab4q5 {
 
     public static void main(String[] args) {
@@ -10,7 +11,7 @@ public class lab4q5 {
     public static void highestCycle () {
 
         double highestCycleLength = 0;
-        final double limit = 10;
+        final double limit = 1000;
         double result = 0;
         
         // loops through all the denominators
@@ -23,7 +24,7 @@ public class lab4q5 {
             // loops through the remainder until a cycle is found (when remainder == 1 or the position is greater than the denominator) 
             while (position < denominator && !foundCycle) {
 
-                remainder = (remainder * 10) % denominator;
+                remainder = (remainder * 1000) % denominator;
 
                 if (remainder == 1) {
                     foundCycle = true;
@@ -43,7 +44,6 @@ public class lab4q5 {
                     result = denominator;
                 }
             }
-
         }
 
         System.out.println("The value of d < " + limit + " for which 1/d contains the longest recurring cycle is " + result + ".");
