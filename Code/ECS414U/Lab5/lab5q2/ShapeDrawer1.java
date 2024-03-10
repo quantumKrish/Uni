@@ -7,7 +7,7 @@ class ShapeDrawer1 extends Drawer implements SquareDrawer {
 
     }
 
-    public void drawSquare(int sideLength, char filler) {
+    public void drawSquare() {
 
         for (int i = 0; i < sideLength; i++) {
 
@@ -21,7 +21,7 @@ class ShapeDrawer1 extends Drawer implements SquareDrawer {
         
     }
 
-    public void drawSpecialSquare(int sideLength, char filler, char special) {
+    public void drawSpecialSquare() {
 
         int lowerLimit = 0;
         int upperLimit = sideLength - 1;
@@ -69,8 +69,6 @@ class ShapeDrawer1 extends Drawer implements SquareDrawer {
             lowerLimit--;
             upperLimit++;
         }
-
-
     }
 
 

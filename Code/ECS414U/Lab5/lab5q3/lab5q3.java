@@ -4,8 +4,8 @@ public class lab5q3 {
 
     public static void main(String[] args) {
 
-        ShapeDrawer2 square = new ShapeDrawer2(5, '*', 'X');
-        square.drawStairCase(5, '*');
+        ShapeDrawer2 square = new ShapeDrawer2(3, '*', '+');
+        square.drawStairCase();
     }
     
 }
