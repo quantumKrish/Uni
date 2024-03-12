@@ -11,7 +11,8 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     background-color: #E7E8D1;
-    padding: 0.5em;    
+    padding: 0.5em;   
+     
 }
 
 
@@ -29,7 +30,7 @@ header {
     background-color: #A7BEAE;
     position: absolute;
     top: 7em;
-    height: 30%;
+    height: 27%;
     width: 85%;
     transform: translateX(-50%);
     z-index: -1;
@@ -55,6 +56,37 @@ header {
     z-index: -1;
 }
 
+.colored-panel-login {
+    background-color: #A7BEAE;
+    position: absolute;
+    top: 33.4em;
+    right: 0;
+    height: 9%;
+    width: 14%; 
+    z-index: -1;
+}
+
+#login {
+
+    text-align: end;
+}
+
+.colored-panel-addpost {
+    background-color: #A7BEAE;
+    position: absolute;
+    top: 39.5em;
+    right: 0;
+    height: 9%;
+    width: 14%; 
+    z-index: -1;
+}
+
+#addpost {
+
+    text-align: end;
+}
+
+
 h1 {
     font-family: 'Abril Fatface', serif;
     font-size: 3em;
@@ -70,6 +102,14 @@ h2 {
     font-weight: bold;
     margin-top: 3em;
     margin-bottom: 4em;
+}
+
+h3 {
+    font-family: 'Abril Fatface', serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 3em;
+    margin-bottom: 1em;
 }
 
 header nav ul {
@@ -102,6 +142,13 @@ p {
     font-family: monospace;
     line-height: 1.2em;
 }
+
+
+#end-margin {
+    margin-bottom: 6em;
+}
+
+
 footer {
     grid-area: footer;
 
@@ -113,6 +160,74 @@ footer {
     justify-content: end; 
     padding: 0.8em;
 }
+
+.contact-form-container {
+    background-color: #A7BEAE; 
+    padding: 2.5em;
+    width: 90%;
+    max-width: 37.5em; 
+    margin: 3% auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 0.9375em;
+    margin: 0.625em 0;
+    border: 0.0625em solid #ccc;
+    border-radius: 0.25em;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #4CAF50; 
+    outline: none;
+}
+
+label {
+    margin-top: 1.25em;
+    margin-bottom: 0.3125em;
+    font-size: 1em; 
+    color: #333;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.25em;
+}
+
+button {
+    cursor: pointer;
+    padding: 0.625em 0.9375em;
+    border: none;
+    border-radius: 0.25em;
+    font-size: 1em; 
+}
+
+button[type="submit"] {
+    background-color: #4CAF50; 
+    color: white;
+}
+
+button[type="button"] {
+    background-color: #f44336; 
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+
+  
+
 
 
 

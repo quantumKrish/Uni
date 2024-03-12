@@ -5,14 +5,15 @@
 
     <meta charset="UTF-8" name="viewport" content="width=device-width"/>
 
-    <title>My Homepage</title>
+    <title>Add Post</title>
 
     <link rel="stylesheet" type="text/css" href="css/phase1.css">
 
 </head>
 
-
 <body>
+
+
 
     <header>
 
@@ -35,33 +36,35 @@
 
     <div>
         <span class="colored-panel-title"></span>
-        <h2> Projects </h2>
+        <h2> Add post </h2>
     </div>
 
 
-
-    <article >
-
-        <p> 
-            Here are some of the projects I've worked on in the past:
-            <br>
-            <br>
-        </p>
-
-        <figure>
-            <img src="images/under_contruction.png" alt="collage of pictures of me" style="width: 40%;">
-        </figure>
-
-    </article>
+    <div class="contact-form-container">
+        <form id="contact-form">
+            <label for="Title">Title:</label>
+            <input type="text" id="name" name="name" required>
 
 
-    <footer>
+            <label for="message">Post Content:</label>
+            <textarea id="message" name="message" rows="10" required maxlength="6000" placeholder="Your Blog content here."></textarea>
 
-        <p> Kirishanth-P 2024 @ </p>
+            <div class="buttons">
+                <button type="submit">Send</button>
+                <button type="button" onclick="clearForm()">Clear Form</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function clearForm() {
+            document.getElementById("contact-form").reset();
+        }
+    </script>
 
-    </footer>
+<footer>
 
+    <p> Kirishanth-P 2024 @ </p>
+
+</footer>
 
 </body>
-
-</html>

@@ -14,6 +14,7 @@
 
 <body>
 
+
     <header>
 
         <span class="colored-panel-name"></span>
@@ -35,33 +36,35 @@
 
     <div>
         <span class="colored-panel-title"></span>
-        <h2> Projects </h2>
+        <h2> Log in </h2>
     </div>
 
 
+    <div class="contact-form-container">
+        <form id="contact-form">
 
-    <article >
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-        <p> 
-            Here are some of the projects I've worked on in the past:
-            <br>
-            <br>
-        </p>
+            <label for="password-login">Password:</label>
+            <input type="text" id="password-login" name="password" required>
 
-        <figure>
-            <img src="images/under_contruction.png" alt="collage of pictures of me" style="width: 40%;">
-        </figure>
+            <div class="buttons">
+                <button type="submit">Send</button>
+                <button type="button" onclick="clearForm()">Clear Form</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function clearForm() {
+            document.getElementById("contact-form").reset();
+        }
+    </script>
 
-    </article>
+<footer>
 
+    <p> Kirishanth-P 2024 @ </p>
 
-    <footer>
-
-        <p> Kirishanth-P 2024 @ </p>
-
-    </footer>
-
+</footer>
 
 </body>
-
-</html>
