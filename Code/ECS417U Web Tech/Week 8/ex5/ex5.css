@@ -1,0 +1,55 @@
+@import url(reset.css);
+
+
+
+table {
+
+
+    margin-left: 0.5em;
+    border: 1px solid #333;
+    margin-bottom: 1em;
+
+}
+
+caption {
+
+    font-size: 1em;
+    font-weight: bold;
+    padding: 0.2em;
+    background-color: #ffbf00;
+    color: #000000;
+    margin-top: 0.5em;
+    border: 1px solid #333;
+}
+
+tfoot td {
+
+    background-color: #ffbf00;
+    color: #000000;
+    font-size: 1em;
+    font-weight: bold;
+    }
+
+
+
+th {
+    background-color: #333;
+    color: #ffffff;
+    padding: 0.5em;
+}
+
+td {
+    border: 1px solid #333;
+    padding: 0.5em;
+    background-color: rgb(244, 244, 244);
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+

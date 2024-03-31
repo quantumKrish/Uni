@@ -1,0 +1,203 @@
+/**
+background-color: #333;
+background-color: #dedede96;
+background-color: #A7BEAE;
+color: #A7BEAE; */
+@import url(reset.css);
+
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    background-color: #E7E8D1;
+    padding: 0.5em;   
+     
+}
+
+
+header {
+
+    color: #333;
+    padding: 1em;
+    margin-bottom: 0.4em;
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+
+    background-color: #A7BEAE;
+
+}
+
+#login {
+
+    text-align: end;
+}
+
+
+#addpost {
+
+    text-align: end;
+}
+
+
+h1 {
+    font-family: 'Abril Fatface', serif;
+    font-size: 3em;
+    font-weight: bold;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    background-color: #A7BEAE;
+    padding: 1%;
+
+}
+
+h2 {
+    font-family: 'Abril Fatface', serif;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 4em;
+    background-color: #A7BEAE;
+    width: 20%;
+    padding: 1%;
+    margin-left: 0.5em;
+
+    
+}
+
+h3 {
+    font-family: 'Abril Fatface', serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 3em;
+    margin-bottom: 1em;
+}
+
+header nav ul {
+    display: flex;
+    margin-top: 2em;
+}
+
+header nav ul li {
+    margin: 0.4em;
+    color: #333;
+    font-family: 'Abril Fatface', serif;
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+img {
+    width: 90%;
+    height: auto;
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+
+p {
+    font-size: 1.2em;
+    margin-left: 1em;
+    font-family: monospace;
+    line-height: 1.2em;
+}
+
+
+#end-margin {
+    margin-bottom: 6em;
+}
+
+
+footer {
+    grid-area: footer;
+
+    background-color: #333;
+    font-size: 0.8rem;
+    color: #fff;
+
+    display: flex; 
+    justify-content: end; 
+    padding: 0.8em;
+}
+
+.contact-form-container {
+    background-color: #A7BEAE; 
+    padding: 2.5em;
+    width: 90%;
+    max-width: 37.5em; 
+    margin: 3% auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 0.9375em;
+    margin: 0.625em 0;
+    border: 0.0625em solid #ccc;
+    border-radius: 0.25em;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #4CAF50; 
+    outline: none;
+}
+
+label {
+    margin-top: 1.25em;
+    margin-bottom: 0.3125em;
+    font-size: 1em; 
+    color: #333;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.25em;
+}
+
+button {
+    cursor: pointer;
+    padding: 0.625em 0.9375em;
+    border: none;
+    border-radius: 0.25em;
+    font-size: 1em; 
+}
+
+button[type="submit"] {
+    background-color: #4CAF50; 
+    color: white;
+}
+
+button[type="button"] {
+    background-color: #f44336; 
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+
+
+  
+
+
+
+
+
+
+
+

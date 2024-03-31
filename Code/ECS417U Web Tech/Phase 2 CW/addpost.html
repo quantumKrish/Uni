@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" name="viewport" content="width=device-width"/>
+
+    <title>Add Post</title>
+
+    <link rel="stylesheet" type="text/css" href="css/phase2.css">
+
+</head>
+
+<body>
+
+
+
+    <header>
+
+        <h1> <a href="#about">Kirishanth Pirathapan</a></h1>
+
+        <nav>
+            <ul>
+                <li> <a href="homepage.html"> About me </a> </li>
+                <li> <a href="projects.html"> Projects</a>
+                <li> <a href="blog.html"> Blog </a> </li>
+                <li> <a href="experience.html"> Experience </a> </li>                
+                <li> <a href="skills.html"> Skills </a> </li>
+                <li> <a href="education.html"> Education </a> </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div>
+        <span class="colored-panel-title"></span>
+        <h2> Add post </h2>
+    </div>
+
+
+    <div class="contact-form-container">
+        <form id="contact-form">
+            <label for="Title">Title:</label>
+            <input type="text" id="name" name="name" required>
+
+
+            <label for="message">Post Content:</label>
+            <textarea id="message" name="message" rows="10" required maxlength="6000" placeholder="Your Blog content here."></textarea>
+
+            <div class="buttons">
+                <button type="submit">Send</button>
+                <button type="button" onclick="clearForm()">Clear Form</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function clearForm() {
+            document.getElementById("contact-form").reset();
+        }
+    </script>
+
+<footer>
+
+    <p> Kirishanth-P 2024 @ </p>
+
+</footer>
+
+</body>
