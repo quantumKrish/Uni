@@ -1,0 +1,47 @@
+@import url(reset.css);
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+article {
+    flex: 1;
+}
+
+header {
+    color: #000000;
+    margin-bottom: 0.7em;
+    border: 2px solid #0a4d1d;
+}
+
+h1 {
+    font-size: 2em;
+    text-align: center;
+    border: 3px solid #13bd43;
+}
+img {
+    height: 80vh;
+    margin-bottom: 2.6em;
+    padding: 1em;
+
+
+}
+
+button {
+    background-color: #0a4d1d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+div {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    
+}

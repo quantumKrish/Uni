@@ -1,58 +1,30 @@
-function multiplication() {
-    
-    // Code inside this function will run when the DOM content is fully loaded
-    const table = document.getElementById("multiplicationTable");
-
-    tbody = document.createElement("tbody");
-    table.appendChild(tbody);
-
-   // Loop to generate header row for the multiplication table
-   const thead = document.createElement("thead");
-   const headRow = document.createElement("tr");
-
-   for (let i = 0; i <= 15; i++) {
-
-        if (i == 0) {
-
-            const head = document.createElement("th");
-            head.textContent = "×";
-            headRow.appendChild(head);
-        }
 
 
-        if (i > 0) {
-
-            const head = document.createElement("th");
-            head.textContent = i;
-            headRow.appendChild(head);
-    
-        }
-   }
-
-   thead.appendChild(headRow);
-   table.appendChild(thead);
-
-   // Loop to generate rows for the multiplication table
-   for (let i = 1; i <= 15; i++) {
-    
-    const row = document.createElement("tr");
-
-
-    const head = document.createElement("th");
-    head.textContent = i;
-    row.appendChild(head);
+const form = document.getElementById('form');
+const submitButton = document.getElementById('save-btn');
 
 
 
-       for (let j = 1; j <= 15; j++) {
+submitButton.addEventListener('click', (event) => {
 
-           const cell = document.createElement("td");
-           cell.textContent = i * j;
-           row.appendChild(cell);
-       }
+  let fnameValue = document.getElementById("firstname").value;
+  localStorage.setItem('firstname', fnameValue);
 
-       tbody.appendChild(row);
-   }
-}
+  let snameValue = document.getElementById("surname").value;
+  localStorage.setItem('surname', snameValue); 
 
-multiplication();
+  window.location.href = 'ex5result.html';
+
+});
+
+  let form1 = document.getElementById('form1');
+
+  let storedValue1 = localStorage.getItem('firstname');
+  let storedValue2 = localStorage.getItem('surname');
+
+  let fullname = document.createElement('h1');
+  fullname.textContent = storedValue1 + ' ' + storedValue2;
+
+  console.log(fullname);
+
+  form1.appendChild(fullname);

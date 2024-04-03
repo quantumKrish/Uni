@@ -1,8 +1,134 @@
 <!DOCTYPE html>
-<html>
-        
-    <body>   
-        <script src="ex4.js"> </script>
-   </body>
+<html lang = "en">
+
+    <head>
+
+        <meta charset = "UTF-8">
+        <title> Shirt Selection Form </title>
+        <link rel = "stylesheet" type = "text/css" href = "ex4.css">
+
+    </head>
+
+    <body>
+
+        <form id="form" method="POST" action="https://drusmannaeem.co.uk/process.php">
+
+            <fieldset>
+
+                <legend>Shirt Order Form</legend>            
+                
+                <div class = "border">
+
+                    <p>
+                    Shirt Size
+                    <br>
+
+                    <select name="size">
+                            <option>Choose size</option>
+                            <option>XS</option>
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                            <option>XL</option>
+                        </select>
+
+                        <br>
+                        Sleeves
+                        <br>
+                        <input type="radio" name="sleeve" value="short">Short <br>
+                        <input type="radio" name="sleeve" value="long">Long
+                    
+
+                        <br>
+                        Choose shirt colour <br>
+                        <input type="color" name="colorChoice">
+                    
+
+                        <br>
+                        Quantity 
+                        <br>
+                        <input type="number" id="quantity" name="quantity" min="1" max="10">
+
+                        <br>
+                        Date requested
+                        <br>
+                        <input type="date" name="dateRequested">
+
+                    </p>
+
+                </div>
+
+                <div class = "border">
+
+                    <p>
+                        Name
+                        <br>
+                        <input type="text" id="name" name="name">
+
+                        <br>
+                        Email address
+                        <br>
+                        <input type="email" id="email" name="email">
+
+                        <br>
+                        Telephone number
+                        <br>
+                        <input type="tel" name="telephone" pattern="\d{2}-\d{3}-\d{3}-\d{4}">
+                        Example: 44-207-882-1234
+
+                    </p>
+
+                </div>
+
+                <div class = "border">
+
+                    <p>
+                        Address
+                        <br>
+                        <input name="address" id="address" >
+
+                        <br>
+                        City
+                        <br>
+                        <input list="cities" name="city" autocomplete="off">
+                        <datalist id="cities">
+                            <option value="London">
+                            <option value="Milton Keynes">
+                            <option value="Colchester">
+                            <option value="Basingstoke">
+                        </datalist>
+                        <br>
+
+                        Postcode
+                        <br>
+                        <input type="text" id="postcode" name="postcode">
+
+
+
+                    </p>
+
+                </div>
+
+                <div class = "white">
+
+                    <p>
+                        Please keep me informed about future shirt designs
+                        <div id="checkboxdiv" >
+                            <input type="checkbox" id="checkbox" name="futureInfo?" value="accept"><br>
+                        </div>
+                        
+                        <div class="input-container">
+                            <input type="submit" id="submit" value="Submit">
+                            <input type="reset" value="Clear Form">
+                        </div>
+                    </p>
+
+            </fieldset>
+        </form>
+
+        <script src="ex4.js"></script>
+
+    </body>
+
 
 </html>
