@@ -1,4 +1,5 @@
 package horseRacingSim;
+
 import java.util.concurrent.TimeUnit;
 import java.lang.Math;
 
@@ -82,19 +83,58 @@ public class Race
                         
             //print the race positions
             printRace();
+
+            // Check if all horses have fallen
+            if (lane1Horse.hasFallen() && lane2Horse.hasFallen() && lane3Horse.hasFallen()) {
+                System.out.println("No one wins!");
+                finished = true;
+            }
+
+            // Tracks if more than one horse has finished
+            int finishedCount = 0;
+            boolean draw = false;
+
+            if (raceWonBy(lane1Horse)) {
+                finishedCount++;
+            }
+            if (raceWonBy(lane2Horse)) {
+                finishedCount++;
+            }
+            if (raceWonBy(lane3Horse)) {
+                finishedCount++;
+            }
             
-            //if any of the three horses has won the race is finished
-            if ( raceWonBy(lane1Horse) ) {
-                finished = true;
-                System.out.println("And the winner is " + lane1Horse.getName());
+            // If more than one horse has finished print draw and the names of the horses
+            if (finishedCount > 1) {
 
-            } else if ( raceWonBy(lane2Horse) ) {
-                finished = true;
-                System.out.println("And the winner is " + lane2Horse.getName());
+                System.out.println("It's a draw between:");
 
-            } else if ( raceWonBy(lane3Horse) ) {
+                if (raceWonBy(lane1Horse)) {
+                    System.out.println("- " + lane1Horse.getName());
+                }
+                if (raceWonBy(lane2Horse)) {
+                    System.out.println("- " + lane2Horse.getName());
+                }
+                if (raceWonBy(lane3Horse)) {
+                    System.out.println("- " + lane3Horse.getName());
+                }
+
                 finished = true;
-                System.out.println("And the winner is " + lane3Horse.getName());
+                draw = true; // Set draw to true
+            }
+            
+
+            //if any of the three horses has won the race is finished and its not a draw then print the winner's name
+            if ( (raceWonBy(lane1Horse) || raceWonBy(lane2Horse) || raceWonBy(lane3Horse)) && !draw )
+            {
+                finished = true;
+                if (raceWonBy(lane1Horse)) {
+                    System.out.println("And the winner is: " + lane1Horse.getName());
+                } else if (raceWonBy(lane2Horse)) {
+                    System.out.println("And the winner is: " + lane2Horse.getName());
+                } else {
+                    System.out.println("And the winner is: " + lane3Horse.getName());
+                }
             }
            
             //wait for 100 milliseconds
@@ -157,8 +197,9 @@ public class Race
      */
     private void printRace()
     {
-        System.out.print('\u000C');  //clear the terminal window
-        
+        // Clear the screen
+        System.out.print("\033[H\033[2J");
+
         multiplePrint('=',raceLength+3); //top edge of track
         System.out.println();
         
@@ -198,7 +239,7 @@ public class Race
         //else print the horse's symbol
         if(theHorse.hasFallen())
         {
-            System.out.print('\u2322');
+            System.out.print('X');
         }
         else
         {
@@ -210,6 +251,9 @@ public class Race
         
         //print the | for the end of the track
         System.out.print('|');
+
+        // Print the horse's name and confidence rating
+        System.out.print(" " + theHorse.getName() + " (Current confidence: " + theHorse.getConfidence() + ")");
     }
         
     

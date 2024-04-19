@@ -3,25 +3,22 @@ package horseRacingSim;
 public class HorseTest {
 
     public static void main(String[] args) {
-
         testConstructor();
-        testSetSymbolInvalid();
         testSetConfidenceOutOfRange();
         testSetNameNull();
     }
 
     public static void testConstructor() {
-
-        String symbol = "A";
-        String name = "Shadowfax";
+        char symbol = '\uD83D';
+        String name = "testHorse";
         double confidence = 0.8;
 
         Horse horse = new Horse(symbol, name, confidence);
 
-        // check if constructor initializes the Horse object correctly
+        // Check if constructor initializes the Horse object correctly
         if (horse.getSymbol() == symbol && horse.getName().equals(name)
-        && horse.getConfidence() < 1 && horse.getDistanceTravelled() == 0 
-        && horse.fall()) {
+                && horse.getConfidence() == confidence && horse.getDistanceTravelled() == 0
+                && !horse.hasFallen()) {
 
             System.out.println("Test passed: Constructor initializes the Horse object correctly.");
 
@@ -30,25 +27,11 @@ public class HorseTest {
             System.out.println("Test failed: Constructor does not initialize the Horse object correctly.");
         }
     }
-
-    public static void testSetSymbolInvalid() {
-
-        Horse horse = new Horse("A", "Shadowfax", 0.8);
-
-        try {
-
-            horse.setSymbol("abc"); // attempt to set an invalid symbol
-            System.out.println("Test failed: Invalid symbol accepted.");
-
-        } catch (IllegalArgumentException e) {
-
-            System.out.println("Test passed: Invalid symbol correctly rejected.");
-        }
-    }
+    
 
     public static void testSetConfidenceOutOfRange() {
 
-        Horse horse = new Horse("A", "Shadowfax", 0.8);
+        Horse horse = new Horse('\uD83D', "Shadowfax", 0.8);
 
         try {
 
@@ -63,13 +46,13 @@ public class HorseTest {
 
     public static void testSetNameNull() {
 
-        Horse horse = new Horse("AD", "Shadowfax", 0.8);
+        Horse horse = new Horse('\uD83D', "Shadowfax", 0.8);
 
         try {
 
             horse.setName(null); // attempt to set name to null
             System.out.println("Test failed: Null name accepted.");
-
+            
         } catch (IllegalArgumentException e) {
 
             System.out.println("Test passed: Null name correctly rejected.");

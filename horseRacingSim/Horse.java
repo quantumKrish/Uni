@@ -7,105 +7,96 @@ package horseRacingSim;
  * @version (18/03/2024)
  */
 public class Horse {
-    
-    //Fields of class Horse
+
+    // Fields of class Horse
     private String name;
-    private String symbol;
+    private char symbol;
     private int distance;
     private boolean fallen;
     private double confidence;
-    
-      
-    //Constructor for objects of class Horse     
-    public Horse (String symbol, String name, double confidence) {
 
-        setSymbol(symbol);
-        setName(name);
-        setConfidence(confidence);
-        goBackToStart(); 
+    // Constructor for objects of class Horse
+    public Horse(char horseSymbol, String horseName, double horseConfidence) {
+
+        setSymbol(horseSymbol);
+        setName(horseName);
+        setConfidence(horseConfidence);
+        goBackToStart();
         fallen = false;
+
     }
-    
-    
-    //Other methods of class Horse
+
+    // methods of class Horse
     public boolean fall() {
+
         fallen = true;
         return fallen;
     }
 
     public boolean hasFallen() {
 
-        if (fallen) {
-            return true;
-            
-        } else {
-            return false;
-        }
+        return fallen;
     }
 
     public double getConfidence() {
+
         return confidence;
     }
 
     public int getDistanceTravelled() {
+
         return distance;
     }
 
     public String getName() {
+
         return name;
     }
 
-    public String getSymbol() {
+    public char getSymbol() {
+
         return symbol;
     }
 
     public void goBackToStart() {
+
         distance = 0;
     }
 
     public void moveForward() {
+
         distance++;
     }
 
-    public void setConfidence(double confidence) {
+    public void setConfidence(double horseConfidence) {
 
-        // ensure confidence is within valid range (0 to 1)
-        if (confidence >= 0 && confidence <= 1) {
+        // ensure confidence is within valid range (0 to 1 not inclusive of 0)
+        if (horseConfidence > 0 && horseConfidence <= 1) {
 
-            this.confidence = confidence;
-
-        } else {
-
-            throw new IllegalArgumentException("Confidence must be between 0 and 1");
-        }
-    }
-
-    public void setSymbol(String symbol) {
-
-        // ensure symbol is not null and is a single character
-        if (symbol != null && symbol.length() == 1 && Character.isLetter(symbol.charAt(0))) {
-
-            this.symbol = symbol;
+            this.confidence = horseConfidence;
 
         } else {
 
-            throw new IllegalArgumentException("Symbol must be a single letter");
+            throw new IllegalArgumentException("Confidence must be between 0 and 1 not inclusive of 0");
         }
     }
 
+    public void setSymbol(char horseSymbol) {
 
+        this.symbol = horseSymbol;
+    }
     
-    public void setName(String name) {
+
+    public void setName(String horseName) {
 
         // ensure name is not null or empty
-        if (name != null && !name.isEmpty()) {
+        if (horseName != null && !horseName.trim().isEmpty()) {
 
-            this.name = name;
-
+            this.name = horseName;
+            
         } else {
 
             throw new IllegalArgumentException("Name cannot be null or empty");
         }
     }
-    
 }
