@@ -1,6 +1,10 @@
-package horseRacingSim;
+package horseRacingSim.part2.scrapGUI;
 
 import javax.swing.*;
+
+import horseRacingSim.part2.Horse;
+import horseRacingSim.part2.Race;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
@@ -10,23 +14,29 @@ public class horseRacingGUI extends JFrame {
     private JScrollPane scrollPane;
     private JButton startButton;
     private Race race;
+    private boolean raceRunning = false;
 
     public horseRacingGUI() {
+        
         setTitle("Horse Racing Simulator");
         setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         consoleTextArea = new JTextArea();
         consoleTextArea.setEditable(false);
+        consoleTextArea.setFont(new Font("Arial Unicode MS", Font.PLAIN, 12)); // Set font for JTextArea
 
         scrollPane = new JScrollPane(consoleTextArea);
         add(scrollPane, BorderLayout.CENTER);
 
         startButton = new JButton("Start Race");
+        startButton.setFont(new Font("Arial Unicode MS", Font.PLAIN, 12)); // Set font for JButton
         startButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                startButton.setEnabled(false); // Disable button while race is running
-                startRace();
+                if (!raceRunning) {
+                    startButton.setEnabled(false); // Disable button while race is running
+                    startRace();
+                }
             }
         });
         add(startButton, BorderLayout.SOUTH);
@@ -38,10 +48,11 @@ public class horseRacingGUI extends JFrame {
         System.setOut(printStream);
 
         // Create a race object and start the race in a separate thread
-        race = new Race(10); // Set race length to 100 for example
-        Horse horse1 = new Horse("A", "Horse 1", 0.8);
-        Horse horse2 = new Horse("B", "Horse 2", 0.7);
-        Horse horse3 = new Horse("C", "Horse 3", 0.6);
+        raceRunning = true;
+        race = new Race(30); // Set race length to 100 for example
+        Horse horse1 = new Horse('A', "Thunder", 0.7);
+        Horse horse2 = new Horse('B', "Lightning", 0.8);
+        Horse horse3 = new Horse('♘', "Storm", 0.6); 
         race.addHorse(horse1, 1);
         race.addHorse(horse2, 2);
         race.addHorse(horse3, 3);
@@ -50,6 +61,7 @@ public class horseRacingGUI extends JFrame {
         Thread raceThread = new Thread(new Runnable() {
             public void run() {
                 race.startRace();
+                raceRunning = false;
                 startButton.setEnabled(true); // Re-enable button after race is finished
             }
         });
@@ -58,6 +70,7 @@ public class horseRacingGUI extends JFrame {
 
     // Custom OutputStream to redirect console output to JTextArea
     private class CustomOutputStream extends OutputStream {
+        
         private JTextArea textArea;
 
         public CustomOutputStream(JTextArea textArea) {
@@ -74,6 +87,11 @@ public class horseRacingGUI extends JFrame {
     }
 
     public static void main(String[] args) {
+        // Set the font to a Unicode supporting font
+        Font font = new Font("Arial Unicode MS", Font.PLAIN, 12);
+        UIManager.put("TextArea.font", font);
+        UIManager.put("Button.font", font); // Set font for buttons
+
         // Create and display the GUI
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {

@@ -1,4 +1,4 @@
-package horseRacingSim;
+package horseRacingSim.part2;
 
 import java.util.concurrent.TimeUnit;
 import java.lang.Math;
@@ -17,6 +17,7 @@ public class Race
     private Horse lane2Horse;
     private Horse lane3Horse;
 
+
     /**
      * Constructor for objects of class Race
      * Initially there are no horses in the lanes
@@ -31,6 +32,7 @@ public class Race
         lane2Horse = null;
         lane3Horse = null;
     }
+
     
     /**
      * Adds a horse to the race in a given lane
@@ -40,6 +42,13 @@ public class Race
      */
     public void addHorse(Horse theHorse, int laneNumber)
     {
+
+        if (theHorse == null) {
+
+            throw new IllegalArgumentException("Cannot add a null horse to a lane.");
+        }
+
+
         if (laneNumber == 1)
         {
             lane1Horse = theHorse;
@@ -52,9 +61,9 @@ public class Race
         {
             lane3Horse = theHorse;
         }
-        else
-        {
-            System.out.println("Cannot add horse to lane " + laneNumber + " because there is no such lane");
+        else {
+
+            throw new IllegalArgumentException("Cannot add more than 3 horses.");
         }
     }
     
@@ -66,6 +75,13 @@ public class Race
      */
     public void startRace()
     {
+
+        if (lane1Horse == null || lane2Horse == null || lane3Horse == null) {
+
+            throw new IllegalArgumentException("Cannot add less than 3 horses");
+
+        }
+
         //declare a local variable to tell us when the race is finished
         boolean finished = false;
         
@@ -130,10 +146,18 @@ public class Race
                 finished = true;
                 if (raceWonBy(lane1Horse)) {
                     System.out.println("And the winner is: " + lane1Horse.getName());
+
+                    increaseConfidence(lane1Horse);
+
                 } else if (raceWonBy(lane2Horse)) {
                     System.out.println("And the winner is: " + lane2Horse.getName());
+
+                    increaseConfidence(lane2Horse);
+
                 } else {
                     System.out.println("And the winner is: " + lane3Horse.getName());
+
+                    increaseConfidence(lane3Horse);
                 }
             }
            
@@ -164,10 +188,10 @@ public class Race
                theHorse.moveForward();
             }
             
-            //the probability that the horse will fall is very small (max is 0.1)
-            //but will also will depends exponentially on confidence 
-            //so if you double the confidence, the probability that it will fall is *2
-            if (Math.random() < (0.1*theHorse.getConfidence()*theHorse.getConfidence()))
+            // the probability that the horse will fall is very small (max is 0.1)
+            // but will also will depends exponentially on confidence 
+            // so if you double the confidence, the probability that it will fall is * 2
+            if (Math.random() < (0.1*theHorse.getConfidence()*theHorse.getConfidence())) 
             {
                 theHorse.fall();
             }
@@ -198,9 +222,8 @@ public class Race
     private void printRace()
     {
         // Clear the screen
-        System.out.print("\033[H\033[2J");
 
-        multiplePrint('=',raceLength+3); //top edge of track
+        multiplePrint('=',raceLength + 3); //top edge of track
         System.out.println();
         
         printLane(lane1Horse);
@@ -212,7 +235,7 @@ public class Race
         printLane(lane3Horse);
         System.out.println();
         
-        multiplePrint('=',raceLength+3); //bottom edge of track
+        multiplePrint('=',raceLength + 3); //bottom edge of track
         System.out.println();    
     }
     
@@ -271,5 +294,13 @@ public class Race
             System.out.print(aChar);
             i = i + 1;
         }
+    }
+
+    private void increaseConfidence(Horse theHorse) {
+
+        double newConfidence = theHorse.getConfidence() + 0.05;
+        double roundedConfidence = Math.min(Math.round(newConfidence * 100.0) / 100.0, 0.99);
+        theHorse.setConfidence(roundedConfidence);
+        System.out.println(String.format("%s new confidence: %.2f", theHorse.getName(), theHorse.getConfidence()));
     }
 }

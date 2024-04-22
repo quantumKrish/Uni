@@ -3,7 +3,7 @@ import java.io.*;
 import java.lang.reflect.Array;
 import java.util.*;
 
-import horseRacingSim.main;
+import horseRacingSim.part1.main;
 
 public class task2 {
 

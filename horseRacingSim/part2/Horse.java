@@ -1,4 +1,4 @@
-package horseRacingSim;
+package horseRacingSim.part2;
 
 /**
  * Horse class contains the fields and methods for the horse object
@@ -30,6 +30,16 @@ public class Horse {
     public boolean fall() {
 
         fallen = true;
+
+        if (confidence - 0.05 < 0.01) {
+
+            confidence = 0.01;
+
+        } else {
+
+            confidence -= 0.05;
+            
+        }
         return fallen;
     }
 

@@ -1,4 +1,4 @@
-package horseRacingSim;
+package horseRacingSim.part1;
 
 public class main {
 
@@ -14,6 +14,7 @@ public class main {
         race.addHorse(horse1, 1); // Add horse1 to lane 1
         race.addHorse(horse2, 2); // Add horse2 to lane 2
         race.addHorse(horse3, 3); // Add horse3 to lane 3
+
 
         // Start the race
         race.startRace();
