@@ -1,6 +1,6 @@
 package horseRacingSim.part2;
 
-public class Main {
+public class testMain {
     public static void main(String[] args) {
         
         // Create horses
