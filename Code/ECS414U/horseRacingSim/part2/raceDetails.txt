@@ -1,0 +1,55 @@
+
+Race Details
+Date: 2024-04-24 13:14:37
+Race Status: Win
+Winner: Thunder
+Participants:
+Lightning Fallen: true Distance Travelled: 2
+Storm Fallen: true Distance Travelled: 2
+Thunder Fallen: false Distance Travelled: 16
+-------------------------------------------------------
+
+
+Race Details
+Date: 2024-04-24 13:14:51
+Race Status: Win
+Winner: Thunder
+Participants:
+Lightning Fallen: true Distance Travelled: 6
+Storm Fallen: true Distance Travelled: 10
+Thunder Fallen: false Distance Travelled: 16
+-------------------------------------------------------
+
+
+Race Details
+Date: 2024-04-24 13:15:03
+Race Status: Win
+Winner: Storm
+Participants:
+Lightning Fallen: true Distance Travelled: 2
+Storm Fallen: false Distance Travelled: 16
+Thunder Fallen: true Distance Travelled: 5
+-------------------------------------------------------
+
+
+Race Details
+Date: 2024-04-25 07:09:03
+Race Status: Win
+Race length: 8
+Winner: Thunder
+Participants:
+Thunder Fallen: false Distance Travelled: 8
+Lightning Fallen: false Distance Travelled: 6
+Storm Fallen: false Distance Travelled: 6
+-------------------------------------------------------
+
+
+Race Details
+Date: 2024-04-25 17:47:26
+Race Status: All Lose
+Race length: 12
+Participants:
+Lightning Fallen: true Distance Travelled: 2
+Storm Fallen: true Distance Travelled: 4
+-------------------------------------------------------
+
