@@ -3,6 +3,7 @@ import datetime
 from django.db import models
 from django.utils import timezone
 
+# Update the name in models.py, run makemigrations, migrate. Fix imports and admin registration.
 
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
